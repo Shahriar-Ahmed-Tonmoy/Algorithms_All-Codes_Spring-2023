@@ -1,33 +1,30 @@
 #include<stdio.h>
 #include<string.h>
 
-struct stu{
-    int sid;
-    char name [20];
-    int marks[5];
+struct Person{
+    int ID;
+    char name[20];
+    float salary;
 };
 
-int main ()
+int main()
 {
-    int total =0;
-    float avg;
-    struct stu s1,s2,s3;
-    printf("Enter ID: \n");
-    scanf("%d", &s1.sid);
-    printf("Enter name: \n");
-    scanf("%s", &s1.name);
-    printf("Enter marks of 5 subject: \n");
-    for (int i=1; i<=5; i++)
-    {
-        scanf("%d", &s1.marks[i]);
-        total = total + s1.marks[i];
-    }
+    struct Person Person1, Person2, Person3, Person4, Person5;
+    Person1.ID = 101;
+    strcpy(Person1.name,"Rakibul");
+    Person1.salary = 30000.00;
 
-    avg= total/5;
-    printf("============================\n");
-    printf("Student info: \n");
-    printf("%d\n", s1.sid);
-    printf("%s\n", s1.name);
-    printf("%Total = %d\n", total);
-    printf("Average = %f\n", avg);
+    printf("Person info: ");
+    printf("%d\n", Person1.ID);
+    printf("%s\n", Person1.name);
+    printf("%f\n\n", Person1.salary);
+
+    Person2.ID = 102;
+    strcpy(Person2.name, "Mercedes");
+    Person2.salary = 60000.00;
+
+    printf("Person info: ");
+    printf("%d\n", Person2.ID);
+    printf("%s\n", Person2.name);
+    printf("%f\n", Person2.salary);
 }
